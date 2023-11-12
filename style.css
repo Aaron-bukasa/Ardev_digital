@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* RESET */
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* VARIABLES*/
+:root {
+
+    /* color variables */
+    --blueColor: #0707d4;
+    --yellowColor: yellow;
+    --pulpleColor: #30058f;
+    --lightColor: #fff;
+    --darkColor: #000;
+
+    /* spacing variables */
+    --pdbtn: 1rem;
+    --pdtop: 2.2rem;
+}
+
+/* || GENERAL STYLE || */
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--darkColor);
+    background-color: var(--lightColor);
+}
+#container {
+    max-width: 1300px;
+    padding: var(--pdtop) 1.2rem;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+    color: var(--darkColor);
+}
+ul {
+    list-style: none;
+}
+
+/* || HEADER || */
+.header__navbar {
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+}
+.header__navbar__links {
+    display: flex;
+}
+.header__navbar__links .link {
+    display: none;
+}
+.link h2 {
+    font-size: 1.1rem;
+}
+.header__navbar__links .btn {
+    display: flex;
+    column-gap: 2rem;
+}
+.header__navbar__links--active {
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    height: 100vh;
+    background-color: var(--lightColor);
+    padding: var(--pdtop) 2.5rem;
+}
+.header__navbar__links--active .link {
+    display: block;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 2px solid #00000031;
+    order: 2;
+}
+.header__navbar__links--active .link li {
+    margin-block: 1.5rem;
+}
+.header__navbar__links--active .link ul {
+   display: none;
+}
+.header__navbar__links--active .btn {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+.header__navbar__links--active .btn::before {
+    content: 'Ardev digital';
+    position: absolute;
+    left: 0;
+}
+.header__navbar__links--active .btn__menu__open {
+    display: none;
+}
+.header__navbar__links--active .btn__menu__close {
+    display: block;
+}
+.header__navbar__links--active .btn .btn__search {
+    display: none;
+}
+.btn__search:hover, .btn__menu:hover {
+    cursor: pointer;
+}
+.btn__search input, .btn__menu__close {
+    display: none;
+}
+.header__title {
+    margin-block: 4rem;
+}
+.header__title__head  h1 {
+   font-size: 2.5rem;
+   line-height: 1.3;
+   letter-spacing: -1px;
+   margin-bottom: 1rem;
+}
+.header__title__head  span {
+    display: block;
+    color: var(--blueColor);
+}
+.header__title__head .btn {
+margin-block: 2rem;
+}
+.header__title__head .btn  a {
+    font-weight: 700;
+    color: var(--blueColor);
+    padding: 1rem;
+    margin-right: 1rem;
+    border: 1px solid var(--blueColor);
+    border-radius: 5px;
+}
+.header__title__head .btn  a:nth-child(1) {
+    color: var(--lightColor);
+    background-color: var(--blueColor);
+    border-color: var(--darkColor);
+}
+.header__title__head .btn  a:nth-child(1):hover {
+    opacity: .7;
+}
+.header__title__head .btn  a:nth-child(2):hover {
+    background-color: hsl(0, 0%, 100%);
+    border-color: var(--pulpleColor);
+}
+.header__title__bannere {
+    display: none;
+}
+/* responsive header */
+@media screen and (min-width: 667px) {
+    .header__title__head  h1 {
+        font-size: 2.8rem;
+    }
+    .header__title__head  p {
+        font-size: 1.35rem;
+    }
+}
+@media screen and (min-width: 992px) {
+
+    .header__navbar__links {
+        justify-content: space-between;
+        width: 80%;
+    }
+    .header__navbar__links .link {
+        width: 91%;
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 4rem;
+    }
+    .header__navbar__links .link ul {
+        display: none;
+    }
+    .cmdSite, .cmdLogiciel {
+        display: none;
+    }
+    .btn__menu {
+        display: none;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .header__title__head  h1 {
+        font-size: 3rem;
+    }
+    .header__title {
+        display: flex;
+    }
+    .header__title__head {
+        width: 42rem;
+    }
+    .header__title__head .btn {
+       margin-top: 2.8rem;
+    }
+    .header__title__bannere {
+        /* display: block; */
+    }
+}
+@media screen and (min-width: 1200px) {
+    .header__navbar__links .link {
+        justify-content: space-between;
+        column-gap: 0;
+    }
+    .cmdSite, .cmdLogiciel {
+        display: block;
+    }
+}
+
+/* || FOOTER || */
+.footer {
+    display: none;
+}

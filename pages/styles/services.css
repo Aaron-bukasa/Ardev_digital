@@ -1,0 +1,93 @@
+/* VARIABLES */
+h2 {
+    margin-block: var(--spaceBlock);
+}
+
+/* HEADER */
+.header__bannere {
+    height: 18rem;
+    position: relative;
+}
+.header__bannere img {
+    width: 100%;
+    height: 100%;
+}
+.header__bannere h1 {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;
+    color: var(--light);
+    background-color: var(--grayOpacity);
+}
+
+
+/* MAIN */
+
+.section__content {
+    font-size: 1.2em;
+    line-height: 1.7;
+    text-align: justify;
+}
+.dev__web__carousel img {
+    display: none;
+}
+.dev__web__carousel {
+    margin-block: var(--spaceBlock) var(--spaceTwo);
+}
+.dev__web__carousel .img-mobile {
+    display: block;
+    width: 100%;
+}
+.skills {
+    margin-block: var(--spaceBlock);
+}
+.skills h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.skills  li::after {
+    content: '';
+    display: inline-block;
+    width: 60%;
+    height: 10px;
+    margin-left: 10px;
+    background-color: var(--yellow);
+}
+#gestion__fin {
+    margin-top: var(--spaceTwo);
+}
+.experiences {
+    margin: var(--spaceBlock) var(--spaceTwo);
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 700px) {
+    .header__bannere {
+        height: 28rem;
+        background-color: red;
+    }
+    main.main {
+        background-color: red;
+    }
+    .section__content {
+        margin: var(--spaceTwo) auto;
+    }
+    #dev__web img {
+        display: block;
+        width: 48%;
+    }
+    .dev__web__carousel .img-mobile {
+        width: 48%;
+    }
+    .dev__web__carousel {
+        display: flex;
+        justify-content: center;
+        column-gap: 5px;
+        overflow-x: hidden;
+    }
+}

@@ -47,7 +47,7 @@
                 <h1>SERVICES</h1>
             </div>
         </header>
-        <main>
+        <main class="main">
             <section id="dev__web">
                 <h2 class="dev__web__title">Developpement Web</h2>
                 <div class="dev__web__content section__content">
@@ -64,9 +64,12 @@
                         Je suis disponible pour des projets à temps plein, à temps partiel ou freelance. Si vous avez un projet de développement web en tête, n'hésitez pas à me contacter.
                     </p>
                     <div class="dev__web__carousel">
-                        <img src="../img/web_dev.png" alt="creation de site web" >
-                        <img src="../img/clement-helardot.jpg" class="img-mobile" alt="">
-                        <img src="../img/christopher-gower-m_HRfLhgABo-unsplash.jpg" alt="">
+                        <div class="carousel">
+                            <img src="../img/web_dev.png" alt="creation de site web" >
+                            <img src="../img/clement-helardot.jpg" class="img-mobile" alt="">
+                            <img src="../img/christopher-gower-m_HRfLhgABo-unsplash.jpg" alt="">
+                            <img src="../img/web_dev.png" alt="creation de site web" >
+                        </div>
                     </div>           
                 </div>
             </section>
@@ -82,14 +85,25 @@
                     <p>
                         Je travaille en étroite collaboration avec mes clients pour comprendre leurs besoins et leurs objectifs. Je leur propose ensuite des solutions personnalisées qui répondent à leurs besoins spécifiques. Je suis également disponible pour fournir un soutien et une maintenance continus après la mise en œuvre du projet.
                     </p>
-                    <ul class="skills">
+                    <div class="skills">
                         <h3>SKILLS</h3>
-                        <li>JavaScript</li>
-                        <li>ReactJs</li>
-                        <li>NodeJs</li>
-                        <li>MySQL</li>
-
-                    </ul>
+                        <div class="javascript">
+                            <label for="javascript">JavaScript</label>
+                            <progress id="javascript" max="100" value="0">85</progress>
+                        </div>
+                        <div class="reactjs">
+                            <label for="reactjs">ReactJs</label>
+                            <progress id="reactjs" max="100" value="0">95</progress>
+                        </div>
+                        <div class="nodejs">
+                            <label for="nodejs">NodeJs</label>
+                            <progress id="nodejs" max="100" value="0">92</progress>
+                        </div>
+                        <div class="mysql">
+                            <label for="mysql">MySQL</label>
+                            <progress id="mysql" max="100" value="0">80</progress>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section id="gestion__fin">

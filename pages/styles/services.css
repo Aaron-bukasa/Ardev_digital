@@ -27,7 +27,9 @@ h2 {
 
 
 /* MAIN */
-
+.main {
+    max-width: var(--content);
+}
 .section__content {
     font-size: 1.2em;
     line-height: 1.7;
@@ -50,13 +52,21 @@ h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
-.skills  li::after {
-    content: '';
-    display: inline-block;
+.skills div {
+    margin: 10px  0 0 var(--spaceTwo) ;
+}
+progress {
+    -webkit-appearance: none;
+    appearance: none;
     width: 60%;
-    height: 10px;
-    margin-left: 10px;
+}
+progress[value]::-webkit-progress-value {
     background-color: var(--yellow);
+    border-radius: 12px;
+}
+::-webkit-progress-bar {
+    background-color: var(--gray);
+    border-radius: 12px;
 }
 #gestion__fin {
     margin-top: var(--spaceTwo);
@@ -69,25 +79,51 @@ h2 {
 @media screen and (min-width: 700px) {
     .header__bannere {
         height: 28rem;
-        background-color: red;
-    }
-    main.main {
-        background-color: red;
     }
     .section__content {
         margin: var(--spaceTwo) auto;
     }
     #dev__web img {
         display: block;
-        width: 48%;
-    }
-    .dev__web__carousel .img-mobile {
-        width: 48%;
+        width: 100%;
     }
     .dev__web__carousel {
-        display: flex;
-        justify-content: center;
-        column-gap: 5px;
-        overflow-x: hidden;
+       width: 60%;
+       margin: var(--spaceBlock) auto;
+       overflow-x: hidden;
     }
+    .dev__web__carousel::before {
+        content: '';
+        display: inline-block;
+    }
+    .carousel {
+        display: flex;
+        animation: 9s linear infinite displayImage;
+    }
+    @keyframes displayImage {
+        0%,
+        29% {
+            transform: translateX(0%);
+        }
+        33%,
+        62% {
+            transform: translateX(-100%);
+        }
+        66%,
+        95% {
+            transform: translateX(-200%);
+        }
+        100%
+        {
+            transform: translateX(-300%);
+        }
+    }
+    .skills progress {
+        width: 40%;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .dev__web__carousel {
+        width: 50%;
+     }
 }

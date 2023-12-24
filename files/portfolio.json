@@ -1,0 +1,43 @@
+[
+    {
+      "nom": "Mon premier projet",
+      "image": "",
+      "description": "Un projet simple qui permet aux utilisateurs de créer, de suivre et de terminer des tâches",
+      "lien": "https://github.com/Aaron-bukasa/Todo.git",
+      "langage": "JavaScript",
+      "technologie": "HTML, CSS",
+      "date": "12/11/2023",
+      "tags": ["todo", "javascript", "html", "css"]
+    },
+    {
+      "nom": "Mon site Web de portfolio",
+      "image": "",
+      "description": "Un site Web de portfolio qui présente mes compétences et mes projets",
+      "lien": "https://github.com/Aaron-bukasa/Ardev_digital.git",
+      "langage": "HTML, CSS, JavaScript",
+      "technologie": "HTML, CSS",
+      "date": "19/11/2023",
+      "tags": ["portfolio", "html", "css", "javascript"]
+    },
+    {
+      "nom": "Mon carnet de contacts",
+      "image": "",
+      "description": "Un projet simple qui permet d'ajouter, de supprimer et de modifier le contact",
+      "lien": "https://github.com/Aaron-bukasa/Carnet_contacts_L2--3.git",
+      "langage": "HTML, CSS, JavaScript",
+      "technologie": "HTML, CSS",
+      "date": "12/11/2023",
+      "tags": ["carnet", "contact", "html", "css", "javascript"]
+    },
+    {
+        "nom": "Mon curriculum vitae",
+        "image": "",
+        "description": "un site qui présente mon curriculum vitae",
+        "lien": "https://github.com/Aaron-bukasa/Aaron_bukasa-Curriculum_vitae.git",
+        "langage": "HTML, CSS, JavaScript",
+        "technologie": "HTML, CSS",
+        "date": "11/12/2023",
+        "tags": ["cv", "curriculum vitae", "html", "css", "javascript"]
+    }
+  ]
+  

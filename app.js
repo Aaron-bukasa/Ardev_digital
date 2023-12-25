@@ -66,23 +66,23 @@ skillsProgress.forEach((progress) => {
 
 // Projets Github
 getGithubProjets(document.querySelector('.portfolio__content'), 3);
-// getGithubProjets(document.querySelector('.portfolio__content-pg'), 0);
-
+getGithubProjets(document.querySelector('.portfolio__content-pg'), 0);
 
 function getGithubProjets(portfolioContent, size) {
-
-  fetch('./files/portfolio.json')
+  let url = '../files/portfolio.json';
+  fetch(url)
   .then((response) => response.json())
   .then((dataJSON) => {
-
+    console.log(dataJSON);
     let j;
     if(size == 0) {
       j = dataJSON.length;
     } else if(size > 0) {
       j = size;
+    } else {
+      
     }
-    console.log(j);
-    
+   
     for(let i = 0; i < j; i++) {
       const lien = document.createElement('a');
       const img = document.createElement('img');
@@ -117,21 +117,4 @@ function getGithubProjets(portfolioContent, size) {
   .catch((error) => {
     // Une erreur s'est produite
   });
-
-
-  // let path = ;
-  // let response = fetch(path);
-  // console.log(response);
-  // let dataJSON = await response.json();
-
-  // let j;
-  // if(size === 0) {
-  //   j = dataJSON.length;
-  // } else if(size > 0) {
-  //   j = size
-  // } else {
-  //   return 'la requete est bloqué'
-  // }
-
-  
 }

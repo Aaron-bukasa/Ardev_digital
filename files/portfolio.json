@@ -1,7 +1,7 @@
 [
     {
       "nom": "Mon premier projet",
-      "image": "./files/img_portfolio/todo.png",
+      "image": "../files/img_portfolio/todo.png",
       "description": "Un projet simple qui permet aux utilisateurs de créer, de suivre et de terminer des tâches",
       "lien": "https://github.com/Aaron-bukasa/Todo.git",
       "langage": "JavaScript",
@@ -11,7 +11,7 @@
     },
     {
       "nom": "Mon site Web de portfolio",
-      "image": "./files/img_portfolio/ardev_portfolio.png",
+      "image": "../files/img_portfolio/ardev_portfolio.png",
       "description": "Un site Web de portfolio qui présente mes compétences et mes projets",
       "lien": "https://github.com/Aaron-bukasa/Ardev_digital.git",
       "langage": "HTML, CSS, JavaScript",
@@ -21,7 +21,7 @@
     },
     {
       "nom": "Mon carnet de contacts",
-      "image": "./files/img_portfolio/carnet_contact.png",
+      "image": "../files/img_portfolio/carnet_contact.png",
       "description": "Un projet simple qui permet d'ajouter, de supprimer et de modifier le contact",
       "lien": "https://github.com/Aaron-bukasa/Carnet_contacts_L2--3.git",
       "langage": "HTML, CSS, JavaScript",
@@ -31,7 +31,7 @@
     },
     {
         "nom": "Mon curriculum vitae",
-        "image": "./files/img_portfolio/cv.png",
+        "image": "../files/img_portfolio/cv.png",
         "description": "un site qui présente mon curriculum vitae",
         "lien": "https://github.com/Aaron-bukasa/Aaron_bukasa-Curriculum_vitae.git",
         "langage": "HTML, CSS, JavaScript",

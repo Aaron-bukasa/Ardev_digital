@@ -32,7 +32,7 @@
     {
         "nom": "Mon curriculum vitae",
         "image": "../files/img_portfolio/cv.png",
-        "description": "un site qui présente mon curriculum vitae",
+        "description": "un site curriculum vitae (cv) qui retrace mon parcours",
         "lien": "https://github.com/Aaron-bukasa/Aaron_bukasa-Curriculum_vitae.git",
         "langage": "HTML, CSS, JavaScript",
         "technologie": "HTML, CSS",

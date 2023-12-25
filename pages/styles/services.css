@@ -5,24 +5,21 @@ h2 {
 
 /* HEADER */
 .header__bannere {
-    height: 18rem;
     position: relative;
 }
-.header__bannere img {
+.header__bannere svg {
     width: 100%;
     height: 100%;
 }
 .header__bannere h1 {
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 5rem;
+    font-size: 24px;
     color: var(--light);
-    background-color: var(--grayOpacity);
+    letter-spacing: 0.5rem;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150px, -50px); 
 }
 
 
@@ -31,7 +28,7 @@ h2 {
     max-width: var(--content);
 }
 .section__content {
-    font-size: 1.2em;
+    font-size: 20px;
     line-height: 1.7;
     text-align: justify;
 }
@@ -77,8 +74,8 @@ progress[value]::-webkit-progress-value {
 
 /* RESPONSIVE */
 @media screen and (min-width: 700px) {
-    .header__bannere {
-        height: 28rem;
+    .header__bannere h1 {
+        font-size: 32px;        
     }
     .section__content {
         margin: var(--spaceTwo) auto;
@@ -91,10 +88,7 @@ progress[value]::-webkit-progress-value {
        width: 60%;
        margin: var(--spaceBlock) auto;
        overflow-x: hidden;
-    }
-    .dev__web__carousel::before {
-        content: '';
-        display: inline-block;
+       position: relative;
     }
     .carousel {
         display: flex;

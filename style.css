@@ -70,16 +70,17 @@ svg {
 .header__nav {
     font-family: 'Lora', serif;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 18px;
     letter-spacing: 2px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--gray);
     padding: var(--spaceBlock);
 }
 .header__nav__logo {
     font-family: 'Lora', serif;
-    font-size: 1.2rem;
+    font-size: 20px;
 }
 .header__nav__logo a {
     color: var(--yellow);
@@ -103,6 +104,8 @@ svg {
     display: none;
 }
 .header__nav__links a {
+    display: flex;
+    flex-direction: column;
     color: var(--light);
 }
 .header__nav__links a::after {
@@ -111,6 +114,7 @@ svg {
     width: 1%;
     height: 5px;
     background-color: transparent;
+    margin-top: 7px;
     transition: width .4s;
 }
 .header__nav__links a:hover:after {
@@ -130,6 +134,7 @@ svg {
 }
 .header__nav__btns svg {
     fill: var(--light);
+    vertical-align: middle;
 }
 .btn__theme-light {
     display: none;
@@ -150,13 +155,13 @@ svg {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: justify;
-    max-width: var(--content);
     padding: var(--spaceBlock);
     margin-block: var(--spaceTwo);
 }
 .header__content h1 {
-    font-size: 1.5rem;
+    font-size: 24px;
     text-align: center;
     color: var(--gray);
 }
@@ -218,6 +223,8 @@ svg {
     }
     .header__nav__links {
         display: flex;
+        align-items: center;
+        justify-content: center;
         column-gap: 1.3rem;
         margin-inline: 25px;
     }
@@ -225,9 +232,9 @@ svg {
         display: none;
     }
     .header__content__title {
-        flex-basis: 25rem;
+        flex-basis: 400px;
         flex-grow: 3;
-        max-width: 35rem;
+        max-width: 560px;
     }
     .title__btns {
         flex-direction: row;
@@ -251,7 +258,7 @@ svg {
     }
     .img-full {
         display: block;
-        max-width: 30rem;
+        max-width: 480px;
         height: auto;
         position: fixed;
         top: 80px;
@@ -266,7 +273,7 @@ svg {
         font-size: 38px;
     }
     .header__content h4 {
-        font-size: 1.1rem;
+        font-size: 18px;
         margin-top: 0.8rem;
     }
     .title__btns {
@@ -289,13 +296,13 @@ svg {
     }
     .header__content {
         line-height: 2rem;
-        margin: var(--spaceTwo) auto;
+        padding-inline: 14%;
     }
     .header__content h1 {
-        font-size: 52px;
+        font-size: 36px;
     }
     .header__content h4 {
-        font-size: 1.2rem;
+        font-size: 20px;
         margin-top: 0.8rem;
     }
     .title__btns {
@@ -311,7 +318,6 @@ svg {
 /* MENU */
 main {
     padding: var(--spaceTwo) var(--spaceBlock);
-    max-width: var(--content);
     margin: 0 auto;
     background-color: var(--light);
 }
@@ -321,34 +327,29 @@ main {
     stroke: var(--light);
 }
 .services__content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, auto);
-    gap: 30px;
+   display: flex;
+   justify-content: center;
+   gap: var(--spaceBlock);
+   flex-wrap: wrap;
 }
 .services__content > div {
     text-align: center;
     border: 1px solid var(--gray);
     border-radius: 15px;
+    max-width: 400px;
 }
 .services__content a {
     display: block;
     color: var(--light);
-    padding: var(--spaceBlock);
+    padding: var(--spaceTwo);
 }
 .gestion__fin {
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
     background-color: var(--yellow);
 }
 .dev__web {
-    grid-column: 1 / -1;
-    grid-row: 2 / 3;
     background-color: var(--gray);
 }
 .dev__logiciel {
-    grid-column: 1 / -1;
-    grid-row: 3 / 4;
     background-color: var(--red);
 }
 .services__content h3 {
@@ -356,7 +357,7 @@ main {
     justify-content: center;
     align-items: center;
     column-gap: 12px;
-    font-size: 1.5em;
+    font-size: 21px;
 }
 .services__content p {
     text-align: justify;
@@ -374,7 +375,13 @@ main {
     margin-left: 2px;
 }
 .portfolio {
-    margin-block: var(--spaceTwo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 100px var(--spaceTwo);
+}
+.portfolio__title {
+    align-self: start;
 }
 .portfolio__content {
     display: flex;
@@ -388,6 +395,21 @@ main {
     display: block;
     max-width: 400px;
     position: relative;
+}
+.portfolio__projet::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0%;
+    background-color: var(--grayOpacity);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    transition: height .6s linear;
+}
+.portfolio__projet:hover::before {
+    height: 100%;
 }
 .portfolio__projet img {
     width: 100%;
@@ -418,30 +440,24 @@ main {
     left: 0;
 }
 .portfolio__projet h3 {
-    font-size: 1.2em;
+    font-size: 20px;
     text-align: center;
 }
 .portfolio .more {
     display: block;
-    font-size: 1.2rem;
+    font-size: 20px;
     font-family: 'Lora', serif;
-    text-align: center;
+    color: var(--light);
+    padding: var(--spaceBlock);
     margin-block: var(--spaceBlock);
+    background-color: var(--red);
+    border-radius: 5px;
 }
 
 /* responsive */
 @media screen and (min-width: 768px) {
-    .gestion__fin {
-        grid-column: 2 / 4;
-        grid-row: 1 / 2;
-    }
-    .dev__web {
-        grid-column: 1 / 3;
-        grid-row: 2 / 3;
-    }
-    .dev__logiciel {
-        grid-column: 3 / 5;
-        grid-row: 2 / 3;
+    .services__content h3 {
+        font-size: 22px;
     }
     .services__content > div {
         box-shadow: 0 0 14px 1px var(--dark);
@@ -466,9 +482,9 @@ main {
         }
     }
 }
-@media screen and (min-width: 1024px) {
-    .services__content a {
-        padding: 80px 50px;
+@media screen and (min-width: 1094px) {
+    section {
+        padding-inline: 10%;
     }
 }
 
@@ -485,12 +501,12 @@ main {
     row-gap: var(--spaceBlock);
 }
 .contact__perso {
-    font-size: 1.3rem;
+    font-size: 21px;
     width: 80%;
     margin: var(--spaceBlock) auto;
 }
 .contact__perso h3 {
-    font-size: 1.5rem;
+    font-size: 24px;
     text-align: center;
     color: var(--gray);
     margin-bottom: var(--spaceTwo);
@@ -526,7 +542,7 @@ input[type="checkbox"] {
 }
 .contact__form button {
     width: 100%;
-    font-size: 1em;
+    font-size: 16px;
     color: var(--light);
     background-color: var(--gray);
     padding: 12px;
@@ -546,7 +562,7 @@ input[type="checkbox"] {
         column-gap: var(--spaceBlock);
     }
     .contact__perso h2 {
-        font-size: 2rem;
+        font-size: 32px;
         margin-bottom: var(--spaceTwo);
     }
     .contact__form {

@@ -64,4 +64,74 @@ skillsProgress.forEach((progress) => {
     observer.observe(progress);
 })
 
+// Projets Github
+getGithubProjets(document.querySelector('.portfolio__content'), 3);
+// getGithubProjets(document.querySelector('.portfolio__content-pg'), 0);
+
+
+function getGithubProjets(portfolioContent, size) {
+
+  fetch('./files/portfolio.json')
+  .then((response) => response.json())
+  .then((dataJSON) => {
+
+    let j;
+    if(size == 0) {
+      j = dataJSON.length;
+    } else if(size > 0) {
+      j = size;
+    }
+    console.log(j);
+    
+    for(let i = 0; i < j; i++) {
+      const lien = document.createElement('a');
+      const img = document.createElement('img');
+      const divContent = document.createElement('div');
+      const nom = document.createElement('h3');
+      const description = document.createElement('p');
+      const langage = document.createElement('p');
+      const date = document.createElement('p');
   
+      lien.href = dataJSON[i]['lien']
+      lien.target = '_blank';
+      lien.classList.add('portfolio__projet');
+      lien.classList.add(`projet-${i}`);
+      img.src = dataJSON[i]['image'];
+      img.alt = dataJSON[i]['nom'];
+      nom.textContent = dataJSON[i]['nom'];
+      description.textContent = dataJSON[i]['description'];
+      langage.textContent = dataJSON[i]['langage'];
+      date.textContent = dataJSON[i]['date']
+      
+      divContent.appendChild(nom);
+      divContent.appendChild(description);
+      divContent.appendChild(langage);
+      divContent.appendChild(date);
+  
+      lien.appendChild(img);
+      lien.appendChild(divContent);
+  
+      portfolioContent.appendChild(lien)
+    }
+  })
+  .catch((error) => {
+    // Une erreur s'est produite
+  });
+
+
+  // let path = ;
+  // let response = fetch(path);
+  // console.log(response);
+  // let dataJSON = await response.json();
+
+  // let j;
+  // if(size === 0) {
+  //   j = dataJSON.length;
+  // } else if(size > 0) {
+  //   j = size
+  // } else {
+  //   return 'la requete est bloqué'
+  // }
+
+  
+}
